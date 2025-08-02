@@ -16,18 +16,20 @@ A machine learning-powered lead scoring app to help prioritize high-potential le
 ## Project Structure
 
 ```
-caprae-lead-scorer/
-├── app.py                       # Streamlit UI for lead prediction
-├── train_model.ipynb           # Model training and preprocessing pipeline
-├── create_mock_dataset.ipynb   # Optional: used to generate the mock data
-├── label_leads.py              # Optional: script to label leads with quality
-├── labeled_mock_leads_dataset_2000.csv  # Labeled mock dataset
-├── lead_scorer_smote.pkl       # Trained XGBoost model
-├── preprocessor.pkl            # Preprocessing pipeline
-├── label_encoder.pkl           # Label encoder for target classes
-├── report.md                   # Project summary and rationale
-├── README.md                   # Project setup and usage instructions
-├── requirements.txt            # Python dependencies
+CAPRAE-LEAD-SCORE/
+├── app.py                          # Streamlit app for lead scoring UI
+├── create_mock_dataset.ipynb      # Notebook to generate mock data
+├── label_leads.py                 # Script to assign lead quality labels
+├── labeled_mock_leads_dataset_2000.csv  # Labeled dataset with lead scores
+├── mock_leads_dataset_2000.csv    # Original unlabeled mock dataset
+├── lead_scorer_smote.pkl          # Trained XGBoost model (with SMOTE)
+├── preprocessor.pkl               # Column transformer for preprocessing
+├── label_encoder.pkl              # Label encoder for 'Lead Quality'
+├── train_model.ipynb              # Full training pipeline with SMOTE + evaluation
+├── requirements.txt               # Python dependencies
+├── README.md                      # Main project documentation
+└── report.md                      # 1-page summary of the approach and rationale
+
 ```
 
 ---
@@ -77,12 +79,6 @@ Designed as an add-on to tools like **SaaSquatch**, this model can be integrated
 * Prioritize high-impact leads
 * Reduce manual effort
 * Improve B2B outreach performance
-
----
-
-## Demo Video
-
-*Include a short screen recording of your app usage here.*
 
 ---
 
